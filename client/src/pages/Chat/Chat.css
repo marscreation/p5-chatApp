@@ -1,0 +1,46 @@
+div.chat > .sidebar {
+    background-color: #1c1c1e;
+}
+.chatbox {
+    background-color: #ffffff;
+}
+.chatbox textarea {
+    background-color: #2a292e;
+}
+.contacts {
+    background-color: #252527;
+}
+.contacts.active {
+    background-color: #363638;
+}
+@media (min-width: 768px) {
+    div.chat {
+        grid-template-columns: minmax(24rem, 26rem) auto;
+    }
+    div.chat > .chatbox.show {
+        position: inherit;
+    }
+    /* .dark .chatbox {
+        background-color: #101223;
+    } */
+}
+
+@media (max-width: 640px) {
+    div.chat {
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+    div.chat > .chatbox {
+        top: 0;
+        left: 100%;
+        width: 100vw;
+        position: absolute;
+        transition: all 0.5s ease-in-out;
+    }
+    div.chat > .chatbox.show {
+        left: 0;
+    }
+    /* .dark div.chat > .chatbox {
+        background-color: #252738;
+    } */
+}
